@@ -557,7 +557,7 @@ module.exports = function ( grunt ) {
    * before watching for changes.
    */
   grunt.renameTask( 'watch', 'delta' );
-  grunt.registerTask( 'watch', [ 'build', 'delta' ] );
+  grunt.registerTask( 'watch', [ 'build', 'karma:units', 'delta' ] );
   //grunt.registerTask( 'watch', [ 'build', 'delta' ] );
 
   /**
