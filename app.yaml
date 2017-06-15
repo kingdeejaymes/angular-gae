@@ -1,0 +1,64 @@
+service: default
+
+runtime: python27
+api_version: 1
+threadsafe: yes
+default_expiration: 1h
+
+builtins:
+- appstats: on
+
+skip_files:
+- ^(.*/)?app\.ya?ml
+- ^(.*/)?index\.ya?ml
+- ^(.*/)?#.*#
+- ^(.*/)?.*~
+- ^(.*/)?.*\.py[co]
+- ^(.*/)?.*/RCS/.*
+- ^(.*/)?\..*
+- ^(.*/)?.*\.scss
+- ^(.*/)?.*\.less
+- ^(docs/.*)
+- ^(tools/.*)
+- ^(.*/)?.*\.csv
+- ^(.*/)?.*\.txt
+- ^(test/.*)
+- ^(.*/)?.*\.coverage
+- ^(.*/)?.*\.coveragerc
+- ^(.*/)?.*\.gitignore
+- ^(\.git/.*)
+- ^(node_modules/.*)
+- ^(vendor/.*)
+- ^(src/.*)
+- ^(build/.*)
+
+handlers:
+
+- url: /assets/(.*\.js)
+  mime_type: text/javascript
+  static_files: bin/assets/\1
+  upload: bin/assets/(.*\.js)
+
+- url: /assets/(.*\.css)
+  mime_type: text/css
+  static_files: bin/assets/\1
+  upload: bin/assets/(.*\.css)
+
+- url: /vendor/(.*\.css)
+  mime_type: text/css
+  static_files: bin/vendor/\1
+  upload: bin/vendor/(.*\.css)
+
+- url: /fonts/(.*\.(css|woff|ttf|woff2|svg|eot))$
+  mime_type: text/css
+  static_files: bin/vendor/bootstrap/dist/fonts/\1
+  upload: bin/vendor/bootstrap/dist/fonts/(.*\.(css|woff|ttf|woff2|svg|eot))$
+
+- url: /assets/(.*\.(jpg|gif|png))$
+  mime_type: image/jpeg
+  static_files: bin/assets/\1
+  upload: bin/assets/(.*\.jpg)
+
+- url: /
+  static_files: bin/index.html
+  upload: bin/index\.html

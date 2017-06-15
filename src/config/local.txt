@@ -1,0 +1,10 @@
+config = {
+
+  'BACKEND_URL' : 'http://localhost:8081',
+  'CLIENT_ID': '312312177205-ru5n3p9co5ga1i0stvfrlss6n4iga3ag.apps.googleusercontent.com',
+  'DISABLE_LOG_IN': false
+
+};
+
+var app = angular.module('appConfiguration', []);
+app.constant('CONSTANTS', config);

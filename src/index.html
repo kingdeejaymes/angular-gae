@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html ng-app="ngBoilerplate" ng-controller="AppCtrl">
+  <head>
+    <title ng-bind="pageTitle"></title>
+
+    <!-- social media tags -->
+    <meta property="og:title" content="Irvine Gift Card" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Gitt Card System for Irvine Company">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- font awesome from BootstrapCDN -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- compiled CSS --><% styles.forEach( function ( file ) { %>
+    <link rel="stylesheet" type="text/css" href="<%= file %>" /><% }); %>
+
+    <!-- compiled JavaScript --><% scripts.forEach( function ( file ) { %>
+    <script type="text/javascript" src="<%= file %>"></script><% }); %>
+
+  </head>
+  <body>
+    
+    <div class="container">
+
+      <!-- menu here -->
+      <div class="collapse navbar-collapse" collapse="menuCollapsed">
+
+        <ul class="nav navbar-nav">
+<!--
+          <li ui-sref-active="active" ng-hide="">
+            <a href ui-sref="login">
+              <i class="fa fa-home" ></i>
+              Login {{LoginDataService.current_user.logged_in}}
+            </a>
+          </li>
+          <li ui-sref-active="active">
+            <a href ui-sref="giftcard-request">
+              <i class="fa fa-home"></i>
+              Request Form
+            </a>
+          </li> -->
+          <!-- <li ui-sref-active="active">
+            <a href ui-sref="home">
+              <i class="fa fa-home"></i>
+              Home
+            </a>
+          </li>
+          <li ui-sref-active="active">
+            <a href ui-sref="about">
+              <i class="fa fa-info-circle"></i>
+              What is it?
+            </a>
+          </li> -->
+        </ul>
+      </div>
+    </div>
+
+    <div class="container" ui-view="main"></div>
+
+    <footer class="footer">
+      <!-- footer here -->
+    </footer>
+  </body>
+  <script src="http://localhost:35729/livereload.js"></script>
+</html>

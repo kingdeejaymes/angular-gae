@@ -1,0 +1,10 @@
+config = {
+
+  'BACKEND_URL' : 'https://backend-dot-acn-irvine-gift-tracking.appspot.com/',
+  'CLIENT_ID': '945352632033-maiom72vgjpe16257kuds4mbivkmsg8g.apps.googleusercontent.com',
+  'DISABLE_LOG_IN': false
+
+};
+
+var app = angular.module('appConfiguration', []);
+app.constant('CONSTANTS', config);
