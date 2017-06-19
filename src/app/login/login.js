@@ -22,7 +22,7 @@ angular.module( 'ngBoilerplate.login', [
      });
 })
 
-.controller( 'LoginCtrl', function LoginController( $scope, $state, GoogleSignin, LoginDataService, $http, CONSTANTS ) {
+.controller( 'LoginCtrl', function LoginController( $scope, $state, GoogleSignin, LoginDataService, $http, CONSTANTS, $timeout ) {
 
   $scope.login_error = false;
   $scope.login = signIn;
@@ -45,7 +45,18 @@ angular.module( 'ngBoilerplate.login', [
     var allowed = false;
 
     login_url = CONSTANTS.BACKEND_URL + '/api/login';
-    $http.post(login_url + "/me", {}, config)
+
+    // temporary function to bypass the login from backend
+    $timeout(function(){
+      $scope.logging_in = false;
+      $scope.btn_disabled = false;
+      LoginDataService.current_user.email = 'john.doe@test.com';
+      LoginDataService.current_user.fullname = 'John Doe';
+      LoginDataService.current_user.logged_in = true;
+      $state.transitionTo('home');
+    }, 2000);
+
+    /*$http.post(login_url + "/me", {}, config)
     .then(function (data, status, headers, config) {
 
       console.log(data);
@@ -64,7 +75,7 @@ angular.module( 'ngBoilerplate.login', [
       $scope.login_error = true;
       LoginDataService.logged_in = false;
 
-    });
+    });*/
 
   };
 });

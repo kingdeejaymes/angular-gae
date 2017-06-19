@@ -465,7 +465,8 @@ module.exports = function ( grunt ) {
         files: [
           '<%= app_files.js %>'
         ],
-        tasks: [ 'jshint:src', 'karma:unit:run', 'copy:build_appjs' ]
+        //tasks: [ 'jshint:src', 'karma:unit:run', 'copy:build_appjs' ]
+        tasks: [ 'jshint:src', 'copy:build_appjs' ]
       },
 
       /**
@@ -476,7 +477,8 @@ module.exports = function ( grunt ) {
         files: [
           '<%= app_files.coffee %>'
         ],
-        tasks: [ 'coffeelint:src', 'coffee:source', 'karma:unit:run', 'copy:build_appjs' ]
+        //tasks: [ 'coffeelint:src', 'coffee:source', 'karma:unit:run', 'copy:build_appjs' ]
+        tasks: [ 'coffeelint:src', 'coffee:source', 'copy:build_appjs' ]
       },
 
       /**
@@ -557,8 +559,8 @@ module.exports = function ( grunt ) {
    * before watching for changes.
    */
   grunt.renameTask( 'watch', 'delta' );
-  grunt.registerTask( 'watch', [ 'build', 'karma:unit', 'delta' ] );
-  //grunt.registerTask( 'watch', [ 'build', 'delta' ] );
+  //grunt.registerTask( 'watch', [ 'build', 'karma:unit', 'delta' ] );
+  grunt.registerTask( 'watch', [ 'build', 'delta' ] );
 
   /**
    * The default task is to build and compile.
