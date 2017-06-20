@@ -1,0 +1,12 @@
+    <div>
+        <h1 style="text-align:center; color:blue; font-size:200%;">Assists Leaderboard</h1>
+        <table>
+            <tr ng-repeat="a in dataName">
+                <td> {{rank[$index]}} <button ng-click="openModal(a)" data-toggle="modal" data-target="#myModal"><b>{{a}}</b></button> : {{dataValue[$index]}} assists per game </td>
+            </tr>
+        </table>
+    </div>
+
+    <div>
+        <p ng-click="back()"><u  style="color:blue">Back to Main Menu</u></p>
+    </div>

@@ -1,3 +1,4 @@
+
 app.service('httpService', function($q, $http){
 
 	function getData() {
@@ -915,4 +916,5 @@ app.service('httpService', function($q, $http){
 	return {
 		getData: getData
 	};
+
 });
