@@ -8,6 +8,9 @@ angular.module( 'ngBoilerplate', [
   'ngBoilerplate.login',
   'LoginDataModel',
   'ui.router',
+  'ngBoilerplate.steals',
+  'ngBoilerplate.blocks',
+  'ngBoilerplate.service',
   'angularMoment'
 ])
 
