@@ -3,6 +3,8 @@ angular.module( 'ngBoilerplate', [
   'templates-common',
   'appConfiguration',
   'ngBoilerplate.home',
+  'ngBoilerplate.fieldGoal3P',
+  'ngBoilerplate.fieldGoalPCT',
   'ngBoilerplate.about',
   'ngBoilerplate.giftcard-request',
   'ngBoilerplate.login',
@@ -11,7 +13,16 @@ angular.module( 'ngBoilerplate', [
   'ngBoilerplate.assists',
   'LoginDataModel',
   'ui.router',
-  'angularMoment'
+  'angularMoment',
+  'ngBoilerplate.assist',
+  'ngBoilerplate.blocks',
+  'ngBoilerplate.fantasypoints',
+  'ngBoilerplate.fg3percent',
+  'ngBoilerplate.fgthree',
+  'ngBoilerplate.fieldGoalPCT',
+  'ngBoilerplate.points',
+  'ngBoilerplate.rebounds',
+  'ngBoilerplate.steals'
 ])
 
 .config( function myAppConfig ( $stateProvider, $urlRouterProvider ) {

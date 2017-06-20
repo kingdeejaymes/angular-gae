@@ -1,7 +1,8 @@
+
 app.service('httpService', function($q, $http){
 
 	function getData() {
-//		var deferred = $q.defer();
+		var deferred = $q.defer();
 //		$http({
 //			method: 'GET',
 //			url: 'http://stats.nba.com/js/data/widgets/home_playoffs.json'
@@ -10,15 +11,12 @@ app.service('httpService', function($q, $http){
 //		}, function(error){
 //			deferred.reject('Error Retrieving JSON');
 //		});
-//		return deferred.promise;
 
-        var deferred = $q.defer();
-
-        var dataNBA = {
+        var nbaData = {
                       "uid": "home_playoffs",
                       "title": "Playoff Leaders",
                       "deep_link": "",
-                      "last_updated": "2017-06-20T01:45:38-04:00",
+                      "last_updated": "2017-06-20T03:55:35-04:00",
                       "count": 2,
                       "items": [
                       {
@@ -26,14 +24,14 @@ app.service('httpService', function($q, $http){
                       "title": "Playoff Leaders",
                       "deep_link": "leaders",
                       "template": "",
-                      "last_updated": "2017-06-20T01:45:38-04:00",
+                      "last_updated": "2017-06-20T03:55:34-04:00",
                       "count": 9,
                       "items": [
                       {
                       "title": "Points",
                       "deep_link": "leaders#!?Season=2016-17&SeasonType=Playoffs",
                       "name": "PTS",
-                      "timestamp": "6/20/2017 1:35:57 AM",
+                      "timestamp": "6/20/2017 3:46:25 AM",
                       "season": "2016-17",
                       "seasontype": "Playoffs",
                       "permode": "PerGame",
@@ -84,7 +82,7 @@ app.service('httpService', function($q, $http){
                       "title": "Rebounds",
                       "deep_link": "leaders#!?Season=2016-17&SeasonType=Playoffs&StatCategory=REB",
                       "name": "REB",
-                      "timestamp": "6/20/2017 1:35:57 AM",
+                      "timestamp": "6/20/2017 3:46:25 AM",
                       "season": "2016-17",
                       "seasontype": "Playoffs",
                       "permode": "PerGame",
@@ -135,7 +133,7 @@ app.service('httpService', function($q, $http){
                       "title": "Assists",
                       "deep_link": "leaders#!?Season=2016-17&SeasonType=Playoffs&StatCategory=AST",
                       "name": "AST",
-                      "timestamp": "6/20/2017 1:35:57 AM",
+                      "timestamp": "6/20/2017 3:46:25 AM",
                       "season": "2016-17",
                       "seasontype": "Playoffs",
                       "permode": "PerGame",
@@ -186,7 +184,7 @@ app.service('httpService', function($q, $http){
                       "title": "Blocks",
                       "deep_link": "leaders#!?Season=2016-17&SeasonType=Playoffs&StatCategory=BLK",
                       "name": "BLK",
-                      "timestamp": "6/20/2017 1:35:57 AM",
+                      "timestamp": "6/20/2017 3:46:25 AM",
                       "season": "2016-17",
                       "seasontype": "Playoffs",
                       "permode": "PerGame",
@@ -237,7 +235,7 @@ app.service('httpService', function($q, $http){
                       "title": "Steals",
                       "deep_link": "leaders#!?Season=2016-17&SeasonType=Playoffs&StatCategory=STL",
                       "name": "STL",
-                      "timestamp": "6/20/2017 1:35:57 AM",
+                      "timestamp": "6/20/2017 3:46:25 AM",
                       "season": "2016-17",
                       "seasontype": "Playoffs",
                       "permode": "PerGame",
@@ -288,7 +286,7 @@ app.service('httpService', function($q, $http){
                       "title": "Field Goal Percentage",
                       "deep_link": "leaders#!?Season=2016-17&SeasonType=Playoffs&StatCategory=FG_PCT&PerMode=Totals",
                       "name": "FG_PCT",
-                      "timestamp": "6/20/2017 1:35:57 AM",
+                      "timestamp": "6/20/2017 3:46:25 AM",
                       "season": "2016-17",
                       "seasontype": "Playoffs",
                       "permode": "Totals",
@@ -339,7 +337,7 @@ app.service('httpService', function($q, $http){
                       "title": "Three Pointers Made",
                       "deep_link": "leaders#!?Season=2016-17&SeasonType=Playoffs&StatCategory=FG3M&PerMode=Totals",
                       "name": "FG3M",
-                      "timestamp": "6/20/2017 1:35:57 AM",
+                      "timestamp": "6/20/2017 3:46:25 AM",
                       "season": "2016-17",
                       "seasontype": "Playoffs",
                       "permode": "Totals",
@@ -390,7 +388,7 @@ app.service('httpService', function($q, $http){
                       "title": "Three Point Percentage",
                       "deep_link": "leaders#!?Season=2016-17&SeasonType=Playoffs&StatCategory=FG3_PCT&PerMode=Totals",
                       "name": "FG3_PCT",
-                      "timestamp": "6/20/2017 1:35:57 AM",
+                      "timestamp": "6/20/2017 3:46:25 AM",
                       "season": "2016-17",
                       "seasontype": "Playoffs",
                       "permode": "Totals",
@@ -441,7 +439,7 @@ app.service('httpService', function($q, $http){
                       "title": "Fantasy Points Per Game",
                       "deep_link": "",
                       "name": "FANTASY_POINTS",
-                      "timestamp": "6/20/2017 1:35:57 AM",
+                      "timestamp": "6/20/2017 3:46:25 AM",
                       "season": "2016-17",
                       "seasontype": "Playoffs",
                       "permode": "PerGame",
@@ -490,14 +488,14 @@ app.service('httpService', function($q, $http){
                       "title": "Playoff Leaders",
                       "deep_link": "teams/traditional/#!?sort=W_PCT&dir=-1",
                       "template": "",
-                      "last_updated": "2017-06-20T01:45:38-04:00",
+                      "last_updated": "2017-06-20T03:55:35-04:00",
                       "count": 9,
                       "items": [
                       {
                       "title": "Points",
                       "deep_link": "teams/traditional/#!?sort=PTS&dir=-1&Season=2016-17&SeasonType=Playoffs",
                       "name": "PTS",
-                      "timestamp": "6/20/2017 1:37:06 AM",
+                      "timestamp": "6/20/2017 3:47:32 AM",
                       "season": "2016-17",
                       "seasontype": "Playoffs",
                       "permode": "PerGame",
@@ -543,7 +541,7 @@ app.service('httpService', function($q, $http){
                       "title": "Rebounds",
                       "deep_link": "teams/traditional/#!?sort=REB&dir=-1&Season=2016-17&SeasonType=Playoffs",
                       "name": "REB",
-                      "timestamp": "6/20/2017 1:37:06 AM",
+                      "timestamp": "6/20/2017 3:47:32 AM",
                       "season": "2016-17",
                       "seasontype": "Playoffs",
                       "permode": "PerGame",
@@ -589,7 +587,7 @@ app.service('httpService', function($q, $http){
                       "title": "Assists",
                       "deep_link": "teams/traditional/#!?sort=AST&dir=-1&Season=2016-17&SeasonType=Playoffs",
                       "name": "AST",
-                      "timestamp": "6/20/2017 1:37:06 AM",
+                      "timestamp": "6/20/2017 3:47:32 AM",
                       "season": "2016-17",
                       "seasontype": "Playoffs",
                       "permode": "PerGame",
@@ -635,7 +633,7 @@ app.service('httpService', function($q, $http){
                       "title": "Blocks",
                       "deep_link": "teams/traditional/#!?sort=BLK&dir=-1&Season=2016-17&SeasonType=Playoffs",
                       "name": "BLK",
-                      "timestamp": "6/20/2017 1:37:06 AM",
+                      "timestamp": "6/20/2017 3:47:32 AM",
                       "season": "2016-17",
                       "seasontype": "Playoffs",
                       "permode": "PerGame",
@@ -681,7 +679,7 @@ app.service('httpService', function($q, $http){
                       "title": "Steals",
                       "deep_link": "teams/traditional/#!?sort=STL&dir=-1&Season=2016-17&SeasonType=Playoffs",
                       "name": "STL",
-                      "timestamp": "6/20/2017 1:37:06 AM",
+                      "timestamp": "6/20/2017 3:47:32 AM",
                       "season": "2016-17",
                       "seasontype": "Playoffs",
                       "permode": "PerGame",
@@ -727,7 +725,7 @@ app.service('httpService', function($q, $http){
                       "title": "Field Goal Percentage",
                       "deep_link": "teams/traditional/#!?sort=FG_PCT&dir=-1&Season=2016-17&SeasonType=Playoffs",
                       "name": "FG_PCT",
-                      "timestamp": "6/20/2017 1:37:06 AM",
+                      "timestamp": "6/20/2017 3:47:32 AM",
                       "season": "2016-17",
                       "seasontype": "Playoffs",
                       "permode": "Totals",
@@ -773,7 +771,7 @@ app.service('httpService', function($q, $http){
                       "title": "Three Pointers Made",
                       "deep_link": "teams/traditional/#!?sort=FG3M&dir=-1&Season=2016-17&SeasonType=Playoffs&PerMode=Totals",
                       "name": "FG3M",
-                      "timestamp": "6/20/2017 1:37:06 AM",
+                      "timestamp": "6/20/2017 3:47:32 AM",
                       "season": "2016-17",
                       "seasontype": "Playoffs",
                       "permode": "Totals",
@@ -819,7 +817,7 @@ app.service('httpService', function($q, $http){
                       "title": "Three Point Percentage",
                       "deep_link": "teams/traditional/#!?sort=FG3_PCT&dir=-1&Season=2016-17&SeasonType=Playoffs",
                       "name": "FG3_PCT",
-                      "timestamp": "6/20/2017 1:37:06 AM",
+                      "timestamp": "6/20/2017 3:47:32 AM",
                       "season": "2016-17",
                       "seasontype": "Playoffs",
                       "permode": "Totals",
@@ -865,7 +863,7 @@ app.service('httpService', function($q, $http){
                       "title": "Free Throw Percentage",
                       "deep_link": "teams/traditional/#!?sort=FT_PCT&dir=-1&Season=2016-17&SeasonType=Playoffs&PerMode=Totals",
                       "name": "FT_PCT",
-                      "timestamp": "6/20/2017 1:37:06 AM",
+                      "timestamp": "6/20/2017 3:47:32 AM",
                       "season": "2016-17",
                       "seasontype": "Playoffs",
                       "permode": "Totals",
@@ -911,13 +909,12 @@ app.service('httpService', function($q, $http){
                       }
                       ]
                       };
-
-                      deferred.resolve(dataNBA);
-
-                      return deferred.promise;
+        deferred.resolve(nbaData);
+		return deferred.promise;
 	}
 
 	return {
 		getData: getData
 	};
+
 });
