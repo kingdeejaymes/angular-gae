@@ -8,7 +8,16 @@ angular.module( 'ngBoilerplate', [
   'ngBoilerplate.login',
   'LoginDataModel',
   'ui.router',
-  'angularMoment'
+  'angularMoment',
+  'ngBoilerplate.assist',
+  'ngBoilerplate.blocks',
+  'ngBoilerplate.fantasypoints',
+  'ngBoilerplate.fg3percent',
+  'ngBoilerplate.fgthree',
+  'ngBoilerplate.fieldGoalPCT',
+  'ngBoilerplate.points',
+  'ngBoilerplate.rebounds',
+  'ngBoilerplate.steals'
 ])
 
 .config( function myAppConfig ( $stateProvider, $urlRouterProvider ) {
