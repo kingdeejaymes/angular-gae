@@ -18,10 +18,14 @@
 
     <!-- compiled JavaScript --><% scripts.forEach( function ( file ) { %>
     <script type="text/javascript" src="<%= file %>"></script><% }); %>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 
   </head>
   <body>
-    
+
     <div class="container">
 
       <!-- menu here -->
@@ -57,7 +61,9 @@
       </div>
     </div>
 
-    <div class="container" ui-view="main"></div>
+    <div class="container" ui-view="main">
+        <ui-view></ui-view>
+    </div>
 
     <footer class="footer">
       <!-- footer here -->
