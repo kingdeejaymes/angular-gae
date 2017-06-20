@@ -3,6 +3,8 @@ angular.module( 'ngBoilerplate', [
   'templates-common',
   'appConfiguration',
   'ngBoilerplate.home',
+  'ngBoilerplate.fieldGoal3P',
+  'ngBoilerplate.fieldGoalPCT',
   'ngBoilerplate.about',
   'ngBoilerplate.giftcard-request',
   'ngBoilerplate.login',
